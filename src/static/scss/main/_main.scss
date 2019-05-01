@@ -1,0 +1,88 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: inherit;
+    font-style: normal;
+  }
+}
+.page-sign-template {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('img/BG.jpg') no-repeat center top / cover;
+
+  .main {
+    flex: 2; // Прибили подвал к низу страницы
+
+    & > .row {
+      @media (max-width: $screen-sm) {
+        margin: 0;
+      }
+    }
+  }
+}
+.form-container {
+  margin-top: 5%;
+  padding-bottom: 29px;
+}
+.sign-social-block {
+  padding: 32px 0;
+  transform: translateY(-32px);
+  background: linear-gradient(90deg, #AB47BC 0%, #7B1FA2 100%);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.12), 
+  0px 5px 15px rgba(0, 0, 0, 0.5);
+
+  .title {
+    margin-bottom: 34px;
+    font-size: 23px;
+    line-height: 1;;
+  }
+}
+.sign-social-list {
+  li {
+    &:not(:last-child) {
+      margin-right: 38px;
+    }
+  }
+  a {
+    font-size: 18px;
+    opacity: $opacity;
+    
+    &:hover {
+      opacity: $opacity-default;
+      color: inherit;
+    }
+  }
+}
+.col-title {
+  margin-bottom: 32px;
+}
+.form-container {
+  .form-group {
+    label {
+      @media (max-width: $screen-sm) {
+        display: none;
+      }
+    }
+  }
+  
+  .form-group:not(:last-child) {
+    margin-bottom: 46px;
+  }
+
+  .form-control {
+    border: none;
+    border-radius: 0;
+  }
+}
+.btn.btn-type-submit {
+  text-transform: uppercase;
+  color: $color-primary;
+  opacity: $opacity;
+
+  &:hover {
+    opacity: $opacity-default;
+  }
+}

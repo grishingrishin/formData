@@ -1,0 +1,41 @@
+.page-footer { 
+  padding: 62px 0 32px; 
+
+  .row > [class^=col-]:first-child {
+    @media (min-width: $screen-xs) and (max-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .navbar {
+    padding-top: 0; // Bootstrap default props
+    padding-bottom: 0; // Bootstrap default props
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+
+    .navbar-nav {
+      & > .nav-item {
+        &:not(:last-child) {
+          margin-right: 34px;
+        }
+
+        & > .nav-link {
+          padding: 0; // Bootstrap default props
+          text-transform: uppercase;
+
+          &:hover {
+            color: inherit; // Bootstrap default props
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    @media (max-width: $screen-sm) {
+      text-align: center;
+    }
+  }
+}

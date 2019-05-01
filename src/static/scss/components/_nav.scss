@@ -1,0 +1,58 @@
+.navbar-container {
+  @media (min-width: $screen-xs) and (max-width: $screen-lg) { margin-bottom: 52px; }
+}
+
+.main-nav {  
+  padding: 40px 0 56px;
+
+  @media (min-width: $screen-xs) and (max-width: $screen-lg) { padding: 24px 0; }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .navbar-nav {
+    & > .nav-item {
+      
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      & > .nav-link {
+        padding: 0; // Bootstrap default props
+
+        &:hover {
+          color: inherit; // Bootstrap default props
+        }
+      }
+
+      .nav-social-link {
+        font-size: 20px;
+      }
+    }
+  }
+
+  a {
+    opacity: $opacity;
+
+    &:hover {
+      opacity: $opacity-default;
+    }
+  }
+
+  .navbar-toggler[type=button] {
+    border: none;
+
+    .navbar-toggler-icon {
+      background-image: none;
+      
+      display: block;
+      width: 22px;
+      height: 2px;
+
+      background-color: $white;
+
+      &:not(:last-child) { margin-bottom: 4px; }
+    }
+  }
+}

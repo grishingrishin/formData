@@ -1,0 +1,44 @@
+extends templates/temp
+
+block title
+  title Стартовая страница
+
+block content
+  main.container-fluid.main
+    .row.justify-content-center.align-items-start
+      .form-container.col-sm-12.col-md-6.col-lg-5.col-xl-4.rounded.bg-light
+        .sign-social-block.rounded
+          h3.title.text-center.text-white Sign Up
+          ul.sign-social-list.d-flex.justify-content-center
+            li.text-white
+              a.sign-social-fb(href="./")
+                i.icon.ion-logo-facebook
+                //- ion-icon(name="logo-facebook")
+            li.text-white
+              a.sign-social-tw(href="./")
+                i.icon.ion-logo-twitter
+                //- ion-icon(name="logo-twitter")
+            li.text-white
+              a.sign-social-g(href="./")
+                i.icon.ion-logo-googleplus
+                //- ion-icon(name="logo-googleplus")
+        p.col-title.text-center 
+          strong Or Be Classical
+        form.form(action='action.php', method='post')
+          .form-group.row
+            label.col-sm-1.col-md-1(for='form-name')
+              i.material-icons face
+            .col-ms-11.col-md-11
+              input.form-control.border-bottom.bg-transparent#form-name(type='text', name='login', placeholder='First Name...')
+          .form-group.row
+            label.col-sm-1.col-md-1(for='form-email')
+              i.material-icons mail
+            .col-ms-11.col-md-11
+              input.form-control.border-bottom.bg-transparent#form-email(type='email', name='email', placeholder='Email...')
+          .form-group.row
+            label.col-sm-1.col-md-1(for='form-pass')
+              i.material-icons lock
+            .col-ms-11.col-md-11
+              input.form-control.border-bottom.bg-transparent#form-pass(type='password', name='password', placeholder='Password')
+          .form-group.text-center.mb-0
+            button.btn.btn-type-submit.bg-transparent(type="submit") Get started
